@@ -5,7 +5,7 @@
 - Tên nhóm: DTL
 - Lớp: L3A
 - Repo nhóm: `K5-L3A-DAY13-DTL-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt: https://github.com/tuanvtxm6/K5-L3A-DAY13-DTL-LaunchEconomics, nhánh `main`, commit chốt:
+- URL repo, nhánh nộp, commit chốt: https://github.com/tuanvtxm6/K5-L3A-DAY13-DTL-LaunchEconomics, nhánh `main`, commit chốt: `e7bbc64dd8393d86fdf4f535380557d42cb90a64` (Merge PR #9, bản đủ toàn bộ bài làm; commit sau đó chỉ ghi dòng này)
 
 ## Thành viên
 
