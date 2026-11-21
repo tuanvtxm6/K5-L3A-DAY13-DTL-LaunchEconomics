@@ -182,7 +182,11 @@ def in_A4(runs, reqs):
     kq = mo_hinh(runs, pv)
     print(f'  Phạm vi: {len(pv)} yêu cầu, {kq["thanh_cong"]} thành công; tổng {kq["tong"]:,.0f} đ; '
           f'cps {kq["cps"]:,.0f} đ {SIM}')
-    for ten, he_so in [('45.000 yêu cầu/tháng', 1.0), ('Một nửa khối lượng', 0.5)]:
+    # Hai dòng đầu cho bảng A4; ba dòng sau là khối lượng thật ở từng bước rollout của pilot
+    # (4 / 10 / 20 trong 40 nhân viên dùng trợ lý), vẫn trả đủ 40 triệu đ/tháng.
+    for ten, he_so in [('45.000 yêu cầu/tháng', 1.0), ('Một nửa khối lượng', 0.5),
+                       ('Pilot 4 người (10%)', 0.10), ('Pilot 10 người (25%)', 0.25),
+                       ('Pilot 20 người (50%)', 0.50)]:
         tc_thang = YEU_CAU_MOI_THANG * he_so * kq['thanh_cong'] / len(reqs)
         co_dinh = CHI_PHI_CO_DINH / tc_thang
         tong_viec = kq['cps'] + co_dinh

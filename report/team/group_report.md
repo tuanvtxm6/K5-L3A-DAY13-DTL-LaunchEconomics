@@ -28,8 +28,17 @@ Dựng hồ sơ launch v0 cho trợ lý hoàn phí LogiX-VN để hội đồng 
 - Xem lại 100%: 11.743 đ = 0,98× (12.415 đ = 1,03× nếu làm lại 15,3 phút) [simulated].
 - Bảng lỗi: đồng thuận 20/20. Chỉ số trong đợt chạy thử: chính 82,83%, bỏ qua gợi ý 27,12%, mở lại 7 ngày 4,25%.
 - Pilot: chia theo nhân viên 20/20, MDE 6 điểm (859/nhóm, m ≥ 299, power 0,64 ở mức 5 điểm), 4 luật dừng, quyết định 2027-01-12.
-- **Đề xuất cuối: Go có điều kiện** cho pilot noi_dia + hang_nang, kèm 4 điều kiện có người phụ trách và ngày kiểm tra.
-- Kết quả duyệt chéo nhóm nhận được từ hội đồng: điền sau buổi duyệt chéo.
+- **Đề xuất cuối: Go có điều kiện** cho pilot noi_dia + hang_nang, kèm các điều kiện có người phụ trách và ngày kiểm tra.
+
+**Duyệt chéo · hội đồng là nhóm WhatEver.** Điểm và quyết định của hội đồng: điền khi nhận phiếu. Năm câu hỏi nhận được và cách nhóm xử lý:
+
+| Câu hỏi của hội đồng | Nhóm trả lời / đã sửa |
+| --- | --- |
+| Bằng chứng hai người gắn nhãn độc lập (20/20), và ca 8 thuộc loại nào | Ca 8 là Hệ thống: trợ lý viện dẫn điều khoản không tồn tại là vi phạm chính sách; trích dẫn đã lộ ra nên không phải Ngầm. Git không chứng minh được độc lập (nhãn 1 push 15:27, nhãn 2 push 16:02); bằng chứng nhóm có là lý do phân loại riêng của người 2 cho từng ca |
+| Ngưỡng ≤ 5 phút có còn hoà vốn khi làm lại 15,3 phút | Không: hoà vốn là 4,8 phút; ở 5 phút chi phí 12.415 đ = 1,03× [simulated]. Đã hạ ngưỡng điều kiện (4) và luật dừng 4 xuống 4,8 phút |
+| Event nào bắt lỗi ngầm như ca 5, 17 | Bản đầu không có: đối soát sổ cái chỉ so với số đã duyệt, mà ở ca 5, 17 số duyệt đã sai. Đã thêm event thứ 9 `audit_sample_checked` (kiểm tra mẫu 100 đơn/tuần, ngưỡng 1%) và tách chỉ số an toàn thành hai |
+| Event kiểm tra 14/12 mà bắt đầu 07/12 | Tuần đầu không dùng cho chỉ số chính nhưng thiếu event thì không theo dõi được luật dừng an toàn. Đã tách điều kiện: event kiểm tra 04/12, trước ngày bắt đầu; Giám đốc vận hành có quyền không cho bắt đầu |
+| Chi phí cố định ở khối lượng thật của pilot | 0,38× chỉ đúng khi cả 40 người dùng. Đã thêm vào `lab13.py`: 1,27× (4 người), 0,68× (10 người), 0,48× (20 người) [simulated]; luật dừng chi phí 8.000 đ ghi rõ chưa cộng cố định |
 
 ## 5. Khó khăn và cách xử lý
 
@@ -55,6 +64,8 @@ Chi tiết đóng góp của từng thành viên nằm trong `TEAM.md`.
 - Đợt chạy thử không có đối chứng, nên ba chỉ số E1 chỉ mô tả đợt chạy thử, chưa nói được tác động của trợ lý.
 - MDE 6 điểm làm pilot có khoảng 1/3 khả năng bỏ sót tác động thật 5 điểm. Pilot đã dùng cả 40 nhân viên của 12 depot nên không thể thêm cụm; chỉ có thể kéo dài thời gian đo hoặc chạy lại một đợt pilot thứ hai rồi gộp kết quả.
 - Nhóm thiếu một người nên không đổi người viết code sau giờ giải lao như hướng dẫn; bù lại bằng kiểm số độc lập cho mọi bảng A, B, D1, E1.
+- Không có bằng chứng kỹ thuật cho việc hai người gắn nhãn độc lập (hội đồng hỏi). Lần sau mỗi người nộp nhãn riêng (commit hoặc file khoá) trước khi xem nhãn của người kia.
+- Bốn chỗ yếu do hội đồng chỉ ra (ngưỡng hoà vốn, event lỗi ngầm, ngày kiểm tra event, chi phí cố định ở khối lượng pilot) đã sửa sau duyệt chéo; xem bảng ở mục 4.
 
 ## 8. Tài liệu tham khảo
 
