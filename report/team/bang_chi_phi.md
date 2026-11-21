@@ -50,6 +50,16 @@ Phạm vi: 982 yêu cầu, 900 thành công, tổng 3.072.513 đ → 3.414 đ m�
 
 - Chi phí cố định có đổi kết luận không? Ở khối lượng nào? Không đổi kết luận ở 45.000 yêu cầu/tháng (0,38×) [simulated], nhưng cố định mỗi việc tăng gấp đôi lên 2.370 đ khi khối lượng còn một nửa (0,48×). Hồ sơ phải ghi rõ số đã cộng cố định và ở khối lượng nào.
 
+Khối lượng thật trong pilot (bổ sung sau câu hỏi duyệt chéo; `in_A4` trong `src/lab13.py`), vẫn trả đủ 40 triệu đ/tháng:
+
+| Bước rollout | Việc thành công mỗi tháng | Chi phí cố định mỗi việc | Chi phí mỗi việc thành công + cố định | So với 12.000 đ |
+| --- | ---: | ---: | ---: | ---: |
+| 4 người (10%) | 3.375 | 11.852 đ | 15.266 đ [simulated] | 1,27× |
+| 10 người (25%) | 8.438 | 4.741 đ | 8.155 đ [simulated] | 0,68× |
+| 20 người (50%) | 16.875 | 2.370 đ | 5.784 đ [simulated] | 0,48× |
+
+- 0,38× chỉ đúng khi cả 40 nhân viên dùng trợ lý. Trong pilot, số đúng là 0,48× ở bước 20 người; bước 4 người đắt hơn nhân viên tự làm (1,27×) [simulated]. Vì vậy luật dừng chi phí 8.000 đ chỉ tính chi phí chạy, chưa cộng cố định.
+
 ## B1 · Đổi từng yếu tố
 
 Gốc (A2): 4.472 đ [simulated].
