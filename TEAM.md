@@ -63,6 +63,7 @@ Sao chép mục dưới đây cho từng thành viên.
 ### Đóng góp cụ thể
 
 - Bộ nhãn người 1 cho 20 ca và bảng khắc phục đủ năm loại (ca 9, 7, 18, 4, 17) trong `report/team/bang_loi.md`; Lam đã xác nhận bộ nhãn. Tỉ lệ đồng thuận với người 2: 20/20.
+- Đề xuất bộ nhãn người 1 được tạo bằng AI theo ý kiến mới của giảng viên mà nhóm báo lại; Lam rà soát/xác nhận trước khi chốt.
 - Bản nháp hồ sơ launch v0 với số đối chiếu và nhãn simulated.
 
 ### Bằng chứng
